@@ -59,7 +59,7 @@ function App() {
         />
       </div>
       <div className='my-4'>
-        <Upcoming />
+        <Upcoming setType={setType} />
       </div>
     </main>
 

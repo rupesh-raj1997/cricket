@@ -6,7 +6,7 @@ export default function (props) {
     return (
         <>
             <div className="text-center">
-                <Tabs />
+                <Tabs updateQuery={props.setType} />
             </div>
             <div className="m-4">
                 <MatchLink />
