@@ -33,7 +33,7 @@ function App() {
     const body = {
       query: createQuery(type, status)
     };
-    const data = await callAPI('post', body);
+    const data = await callAPI('get', body);
     setSchedules(data);
     
   }
