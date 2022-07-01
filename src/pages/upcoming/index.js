@@ -36,7 +36,7 @@ export default function (props) {
                     ></button>
                 </div>
                 <div class="carousel-inner relative w-full overflow-hidden">
-                    {props.schedules && props.schedules.forEach((schedule, index) => {
+                    {props.schedules && props.schedules.length && props.schedules.forEach((schedule, index) => {
                         <div class="carousel-item active float-left w-full" key={index}>
                             <Card schedule={schedule} />
                         </div>
