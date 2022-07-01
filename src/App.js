@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import Heading from './components/Heading';
+import Navigation from './components/Navigation';
+import Upcoming from './pages/upcoming';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className='mx-auto max-w-3xl '>
+      <div className='my-4 px-2'>
+        <Heading>
+          Schedule
+        </Heading>
+      </div>
+      <div className='my-4'>
+        <Navigation
+          selectedLink="Upcoming"
+          links={['Upcoming', 'Live', 'Results']}
+        />
+      </div>
+      <div className='my-4'>
+        <Upcoming />
+      </div>
+    </main>
+
   );
 }
 
