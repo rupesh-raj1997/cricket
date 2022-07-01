@@ -12,7 +12,10 @@ export default function Navigation(props) {
 
 
     const handleClick = (e) => {
-        if (e.target.textContent) setSelectedLink(e.target.textContent)
+        if (e.target.textContent) {
+            setSelectedLink(e.target.textContent)
+            props.onChange(e.target.textContent.toLowerCase())
+        }
     }
     return (
         <div className="w-full flex justify-around">
